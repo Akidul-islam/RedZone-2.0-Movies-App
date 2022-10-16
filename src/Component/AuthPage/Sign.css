@@ -1,0 +1,49 @@
+.signin__container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.signin {
+  background: rgba(103, 230, 239, 0.142);
+  padding: 1rem;
+  width: 25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-size: 400;
+  text-align: center;
+  color: white;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.818);
+  opacity: 0.98;
+  display: block;
+  margin-top: 1rem;
+}
+
+#name,
+#email {
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  background: transparent;
+  outline: none;
+  border: 0.1rem solid rgba(255, 254, 254, 0.507);
+  margin-top: 0.5rem;
+  color: white;
+}
+
+#from_submit {
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 0;
+  background: rgba(255, 0, 0, 0.638);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}

@@ -1,0 +1,86 @@
+import React, { useState } from "react";
+import { AiFillHome } from "react-icons/ai";
+import { RiSlideshow3Line } from "react-icons/ri";
+import { IoLogoFreebsdDevil } from "react-icons/io";
+import { IoIosSettings } from "react-icons/io";
+import { FcServices } from "react-icons/fc";
+import "./sidebar.css";
+import SideList from "./SideList";
+import { NavData } from "../Data";
+
+const Sidebar = () => {
+  const [state, setState] = useState(NavData);
+  const [side, setSide] = useState(0);
+
+  const changeValue = (index) => {
+    setSide(index);
+  };
+
+  return (
+    <aside className='sidebar_container'>
+       <ul style={{ display: "flex", gap: "0.5rem", flexDirection: "column" }}>
+        <SideList
+          icon={
+            <AiFillHome
+              onClick={() => changeValue(1)}
+              className={side === 1 ? "icon active_icon" : "icon"}
+            />
+          }
+          toolTip={"Home"}
+          space={"-5rem"}
+        />
+        <SideList
+          icon={
+            <RiSlideshow3Line
+              onClick={() => changeValue(2)}
+              className={side === 2 ? "icon active_icon" : "icon"}
+            />
+          }
+          toolTip={"TV Show"}
+          space={"-6.5rem"}
+        />
+        <SideList
+          icon={
+            <IoLogoFreebsdDevil
+              onClick={() => changeValue(3)}
+              className={side === 3 ? "icon active_icon" : "icon"}
+            />
+          }
+          toolTip={"WEB SERIES"}
+          space={"-8.5rem"}
+        />
+        <SideList
+          icon={
+            <IoIosSettings
+              onClick={() => changeValue(4)}
+              className={side === 4 ? "icon active_icon" : "icon"}
+            />
+          }
+          toolTip={"Setting"}
+          space={"-5.5rem"}
+        />
+      </ul> 
+    </aside>
+  );
+};
+
+export default Sidebar;
+
+////////////////////////////
+import React from 'react'
+
+const SideList = ({icon, toolTip, space}) => {
+  return (
+    <li> 
+   {icon}    
+    <span
+      className='tooltip'
+      style={{ position: "absolute", right:`${space}`, }}
+    >
+      {toolTip}
+    </span>
+  </li>
+  )
+}
+
+export default SideList

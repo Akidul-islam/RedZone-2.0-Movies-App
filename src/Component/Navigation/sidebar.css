@@ -1,0 +1,59 @@
+.sidebar_container {
+  position: fixed;
+  padding: 0.5rem 0;
+  left: 0;
+  top: 20%;
+  z-index: 1000;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background: hsla(0, 0%, 100%, 0.106);
+  backdrop-filter: blur(2px) brightness(50%);
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  transition: 1s linear;
+}
+.sidebar_container.active {
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+
+ul li {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  padding: 0.5rem 0.6rem;
+  z-index: 1;
+}
+
+.icon {
+  color: white;
+  font-weight: normal;
+  font-size: 1.6rem;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in, color 0.5s ease;
+}
+
+ul li:hover .icon {
+  color: red;
+  opacity: 1;
+}
+
+ul li .tooltip {
+  position: absolute;
+  visibility: hidden;
+  padding: 0.5rem 1rem;
+  right: -5rem;
+  top: 0;
+  background: black;
+  transform: scale(0.5);
+  transition: transform 0.2s linear;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.406);
+  border-image: red;
+}
+
+ul li:hover .tooltip {
+  visibility: visible;
+  transform: scale(1);
+}

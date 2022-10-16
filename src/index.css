@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-file-upload-button {
+    border: 0.11rem solid green;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    background: transparent;
+    color: white;
+    cursor: wait;
+    padding: 0.11rem 0.5rem;
+    display: inline-block;
+    box-shadow: none;
+  }
+}
+.arrow_hover:hover .arrow {
+  opacity: 1;
+}
+
+.movie_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  transition: 0.9s ease-in;
+}
+
+.some:hover .movie_cover {
+  visibility: visible;
+}
