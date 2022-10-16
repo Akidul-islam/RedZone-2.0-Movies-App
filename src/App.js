@@ -32,20 +32,20 @@ const App = () => {
       {user && <SideBar />}
       {user ? (
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/:movieId' element={<ReviewBox />} />
-          <Route path='/tvshow' element={<TvShow />} />
-          <Route path='/webseries' element={<WebSeries />} />
-          <Route path='/setting' element={<Setting />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/profile' element={<Profile />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/:movieId" element={<ReviewBox />} />
+          <Route path="/tvshow" element={<TvShow />} />
+          <Route path="/webseries" element={<WebSeries />} />
+          <Route path="/setting" element={<Setting />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       ) : (
         <Routes>
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/' element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
         </Routes>
       )}
     </AuthContextProvider>
